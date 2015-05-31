@@ -1,0 +1,150 @@
+object Form1: TForm1
+  Left = 320
+  Height = 457
+  Top = 116
+  Width = 780
+  Caption = 'Form1'
+  ClientHeight = 457
+  ClientWidth = 780
+  LCLVersion = '1.0.14.0'
+  object DBGrid1: TDBGrid
+    Left = 80
+    Height = 144
+    Top = 72
+    Width = 608
+    Color = clWindow
+    Columns = <>
+    DataSource = Datasource1
+    TabOrder = 0
+  end
+  object NIS: TEdit
+    Left = 88
+    Height = 23
+    Top = 256
+    Width = 80
+    TabOrder = 1
+  end
+  object Nama: TEdit
+    Left = 208
+    Height = 23
+    Top = 256
+    Width = 93
+    TabOrder = 2
+  end
+  object Kelas: TEdit
+    Left = 344
+    Height = 23
+    Top = 256
+    Width = 80
+    TabOrder = 3
+  end
+  object Email: TEdit
+    Left = 480
+    Height = 23
+    Top = 256
+    Width = 82
+    TabOrder = 4
+  end
+  object Label1: TLabel
+    Left = 107
+    Height = 16
+    Top = 294
+    Width = 19
+    Caption = 'NIS'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 230
+    Height = 16
+    Top = 294
+    Width = 33
+    Caption = 'Nama'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 368
+    Height = 16
+    Top = 294
+    Width = 28
+    Caption = 'Kelas'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 504
+    Height = 16
+    Top = 294
+    Width = 35
+    Caption = 'E-mail'
+    ParentColor = False
+  end
+  object Masukan: TButton
+    Left = 85
+    Height = 25
+    Top = 335
+    Width = 83
+    Caption = 'Masukan data'
+    OnClick = MasukanClick
+    TabOrder = 5
+  end
+  object Rubah: TButton
+    Left = 216
+    Height = 25
+    Top = 335
+    Width = 75
+    Caption = 'Rubah data'
+    OnClick = RubahClick
+    TabOrder = 6
+  end
+  object Hapus: TButton
+    Left = 352
+    Height = 25
+    Top = 335
+    Width = 75
+    Caption = ' Hapus data'
+    OnClick = HapusClick
+    TabOrder = 7
+  end
+  object Keluar: TButton
+    Left = 488
+    Height = 26
+    Top = 334
+    Width = 78
+    Caption = 'Keluar'
+    OnClick = KeluarClick
+    TabOrder = 8
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from datasiswa'
+    )
+    Params = <>
+    left = 624
+    top = 263
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'AdheYatma_TugasPD'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\xampp\mysql\lib\libmysql.dll'
+    left = 688
+    top = 264
+  end
+  object Datasource1: TDatasource
+    DataSet = ZQuery1
+    left = 624
+    top = 336
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    left = 696
+    top = 336
+  end
+end
